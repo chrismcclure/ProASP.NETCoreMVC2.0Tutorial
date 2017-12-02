@@ -4,40 +4,40 @@
 }
 
 <!DOCTYPE html>
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Responses</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        <h1>Here is the list of those attending</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                </tr>
-            </thead>
-         <tbody>
-             @foreach (var attending in @Model)
-             {
-                <tr>
-                    <td>@attending.Name</td>
-                    <td>@attending.Email</td>
-                    <td>@attending.Phone</td>
-                </tr>
-             }
-          
-         </tbody>         
-        </table>
-
-        <p>
-            Click <a asp-for="ListResponses">here</a> to see who is coming.
-        </p>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-success col-sm-12 col-md-10  col-md-offset-1 margin-top-30 padding-top-30">
+                <div class="panel-body">
+                    <h1>Here is the list of those attending</h1>
+                    <table class="table table-sm table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var attending in @Model)
+                            {
+                                <tr>
+                                    <td>@attending.Name</td>
+                                    <td>@attending.Email</td>
+                                    <td>@attending.Phone</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
